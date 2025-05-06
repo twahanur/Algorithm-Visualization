@@ -383,12 +383,16 @@ svg {
 
 #grid-helper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+  align-items: left;
+  justify-content:start;
   margin-bottom: .4rem;
   padding-top: .2rem;
+  position:absolute;
+  font-size: small;
+  font-weight:lighter;
+  border: 2px solid #1e2431;
 }
 
 #visited-container {
@@ -400,22 +404,25 @@ svg {
 }
 
 #start-node {
-  width: 38px;
-  height: 38px;
+  width: 15px;
+  height: 15px;
   background-image: url(../start.svg);
   filter: invert(18%) sepia(45%) saturate(7496%) hue-rotate(207deg) brightness(103%) contrast(87%);
 }
 
 #end-node {
-  width: 38px;
-  height: 38px;
-  background-image: url(../end.svg);
-  filter: invert(18%) sepia(45%) saturate(7496%) hue-rotate(207deg) brightness(103%) contrast(87%);
+  width: 20px;
+  height: 20px;
+  background-image: url(../starting.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* filter: invert(18%) sepia(45%) saturate(7496%) hue-rotate(207deg) brightness(103%) contrast(87%); */
 }
 
 #wall-node {
-  width: 28px;
-  height: 28px;
+  width: 15px;
+  height: 15px;
   background-color: #1e2431;
   box-sizing: border-box;
 }
@@ -427,52 +434,57 @@ svg {
 }
 
 #weight-node {
-  width: 28px;
-  height: 28px;
+  width: 15px;
+  height: 15px;
   border-width: 3px;
   border-style: solid;
   border-color: #1e2431;
 }
 
 #unvisited-node {
-  width: 28px;
-  height: 28px;
+  width: 15px;
+  height: 15px;
   border: 3px solid rgba(0, 190, 218, 0.75);
 }
 
 #current-node {
-  width: 28px;
-  height: 28px;
+  width: 15px;
+  height: 15px;
   background-color: #ffd400;
   border-radius: 100%;
 
 }
 
 #visited-node-forward {
-  width: 28px;
-  margin-right: 10px;
-  height: 28px;
+  width: 15px;
+  margin-right: 5px;
+  height: 15px;
+  margin-left: 10px;
   background-color: rgba(0, 190, 218, 0.75);
 }
 
 #visited-node-backward {
-  width: 28px;
-  height: 28px;
+  width: 15px;
+  height: 15px;
   background-color: #13EBA2;
 }
 
 #visited-node-backtrack {
-  width: 28px;
-  height: 28px;
+  width: 15px;
+  height: 15px;
   background-color: rgba(50, 168, 82, 0.75);
 }
 
 .helper-node-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
+  background-color: #f8f8f8;
+  margin: 1px;
+  border-bottom: 1px solid #0ae470;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 5px;
 }
 
 .toast {
